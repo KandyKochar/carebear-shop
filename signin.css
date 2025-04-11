@@ -1,0 +1,478 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+     /* background: linear-gradient(135deg,#be6623 , beige );  */
+}
+
+/* Header styles */
+
+
+
+
+/* Main content styles */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    perspective: 1000px;
+    background: linear-gradient(135deg,#be6623 , beige );
+}
+
+.signin-wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.signin-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.signin-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.signin-container:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.signin-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.signin-header h2 {
+    color: #481904;
+    font-size: 32px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #481904;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #dbb696;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border-color: #a1704b;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #a1704b;
+    box-shadow: 0 0 0 4px rgba(161, 112, 75, 0.1);
+    outline: none;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #a1704b;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #481904;
+    text-decoration: underline;
+}
+
+/* Remember me checkbox */
+.remember-me {
+    margin: 25px 0;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #481904;
+    user-select: none;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #a1704b;
+}
+
+/* Sign in button */
+.signin-button {
+    width: 100%;
+    padding: 16px;
+    background: #a1704b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.signin-button:hover {
+    background: #995a35;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(161, 112, 75, 0.3);
+}
+
+.signin-button:active {
+    transform: translateY(0);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #dbb696;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    background: white;
+    padding: 0 15px;
+    color: #666;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Social signin buttons */
+.social-signin {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-button {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #dbb696;
+    border-radius: 12px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #481904;
+}
+
+.social-button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-button:hover {
+    background: #ffeedd;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-button:hover img {
+    transform: scale(1.1);
+}
+
+/* Sign up prompt */
+.signup-prompt {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 15px;
+}
+
+.signup-link {
+    color: #a1704b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.signup-link:hover {
+    color: #481904;
+    background: #ffeedd;
+}
+
+/* Form validation styles */
+input:invalid {
+    border-color: #ff4757;
+}
+
+input:invalid:focus {
+    box-shadow: 0 0 0 4px rgba(255, 71, 87, 0.1);
+}
+
+/* Loading state */
+.signin-button.loading {
+    background: #dbb696;
+    cursor: not-allowed;
+}
+
+/* Animation for form appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signin-container {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .signin-container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+
+    .social-signin {
+        flex-direction: column;
+    }
+
+    .signin-wrapper {
+        padding: 10px;
+    }
+
+    .heading {
+        font-size: 40px;
+    }
+
+    .signin-header h2 {
+        font-size: 28px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 12px;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ffeedd;
+    padding: 60px 0 30px;
+    border-top: 3px solid #b15d1c;
+    margin-top: auto; /* This ensures the footer stays at the bottom */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+    max-width: 300px;
+}
+
+.footer-column h3 {
+    color: #b15d1c;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 50px;
+    height: 2px;
+    background-color: #b15d1c;
+}
+
+/* Footer Links */
+.lines {
+    padding: 0;
+    list-style: none;
+}
+
+.contline {
+    padding: 8px 0;
+    transition: transform 0.2s ease;
+}
+
+.contline:hover {
+    transform: translateX(5px);
+}
+
+.content {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.content:hover {
+    color: #b15d1c;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    margin-top: 15px;
+}
+
+.newsletter-section p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dbb696;
+    border-radius: 5px;
+    outline: none;
+}
+
+.newsletter-input:focus {
+    border-color: #b15d1c;
+}
+
+.newsletter-button {
+    padding: 10px 20px;
+    background-color: #b15d1c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newsletter-button:hover {
+    background-color: #995a35;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-column {
+        flex: 1 1 40%;
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-column {
+        flex: 1 1 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-button {
+        width: 100%;
+    }
+}
+
+

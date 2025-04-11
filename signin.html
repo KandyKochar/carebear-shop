@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign In - Care Bear</title>
+        <link rel="stylesheet" href="signin.css">
+        <link rel="icon" type="image/x-icon" href="images/bear-favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="signin-wrapper">
+                <div class="signin-container">
+                    <div class="signin-header">
+                        <h2>Welcome Back!</h2>
+                        <p class="subtitle">Please sign in to your account</p>
+                    </div>
+
+                    <form class="signin-form" id="signinForm">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required 
+                                placeholder="Enter your password">
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+
+                        <div class="remember-me">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember" name="remember">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                        </div>
+
+                        <button type="submit" class="signin-button">Sign In</button>
+
+                        <div class="divider">
+                            <span>or continue with</span>
+                        </div>
+
+                        <div class="social-signin">
+                            <button type="button" class="social-button google">
+                                <img src="images/google-icon.png" alt="Google logo">
+                                Google
+                            </button>
+                            <button type="button" class="social-button facebook">
+                                <img src="images/facebook-icon.png" alt="Facebook logo">
+                                Facebook
+                            </button>
+                        </div>
+
+                        <p class="signup-prompt">
+                            Don't have an account? 
+                            <a href="signup.html" class="signup-link">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="lines">
+                        <li class="contline"><a href="#" class="content">Privacy Policy</a></li>
+                        <li class="contline"><a href="#" class="content">FAQ</a></li>
+                        <li class="contline"><a href="#" class="content">Our Story</a></li>
+                        <li class="contline"><a href="#" class="content">Support</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Shop -->
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul class="lines">
+                        <li class="contline"><a href="#" class="content">New Arrivals</a></li>
+                        <li class="contline"><a href="#" class="content">Best Sellers</a></li>
+                        <li class="contline"><a href="#" class="content">Gift Cards</a></li>
+                        <li class="contline"><a href="#" class="content">Sale</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="lines">
+                        <li class="contline"><a href="tel:+11234567890" class="content"><img src="images/phone-icon.png" alt="Phone icon"> (123) 456-7890</a></li>
+                        <li class="contline"><a href="mailto:info@carebear.com" class="content"><img src="images/email-icon.png" alt="Email icon"> info@carebear.com</a></li>
+                        <li class="contline"><a href="#" class="content"><img src="images/location-icon.png" alt="Location icon"> 205 Humber College Blvd, Toronto, ON</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Newsletter -->
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <div class="newsletter-section">
+                        <p>Subscribe to get special offers and updates</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" class="newsletter-input">
+                            <button type="submit" class="newsletter-button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            document.getElementById('signinForm').addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent the default form submission
+                
+                // Get form values
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                
+                // Basic validation
+                if (email && password) {
+                    // Show success alert
+                    alert('Successfully Signed in');
+                    
+                    // Navigate to home page
+                    window.location.href = 'carebearhome.html';
+                } else {
+                    alert('Please fill in all fields');
+                }
+            });
+    
+            // Optional: Add handling for social sign-in buttons
+            document.querySelector('.social-button.google').addEventListener('click', function() {
+                alert('Google sign in coming soon');
+            });
+    
+            document.querySelector('.social-button.facebook').addEventListener('click', function() {
+                alert('Facebook sign in coming soon');
+            });
+        </script>
+    </body>
+</html>
