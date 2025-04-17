@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Best Sellers - Care Bear</title>
+<link rel="icon" type="image/x-icon" href="images/bear-favicon.ico">
+<link href="./carebearhome.css" rel="stylesheet">
+<link href="./bestsellers.css" rel="stylesheet">
+<style>
+  /* Additional styles for star ratings */
+  .product-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0;
+  }
+  
+  .stars {
+    color: #ff8c42;
+    margin-right: 5px;
+  }
+  
+  .rating-value {
+    font-size: 0.8rem;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+<div class="hover-box">
+<header style="margin-bottom: 15px;">
+<div class="search-bar-body">
+<div class="search-container">
+<input class="search-input" placeholder="Search" type="text">
+<button class="search-button"></button>
+</div>
+<div>
+<nav class="top-right-header">
+<a class="top-right-header-links" href="signin.html">Sign In</a>
+<a class="top-right-header-links" href="cart.html">Cart</a>
+</nav>
+</div>
+</div>
+<h1 class="heading"><a href="carebearhome.html" style="text-decoration: none; color: black;">Care Bear</a></h1>
+</header>
+<div class="dropdown-menu">
+<nav class="nav-categories">
+<div class="dropdown">
+<button class="dropdown-button">
+<a href="bestsellers.html" style="text-decoration: none; color: #B15D1C;">Bestsellers</a>
+</button>
+</div>
+<div class="dropdown">
+<button class="dropdown-button">
+            Infants
+          </button>
+<div class="dropdown-content">
+<div class="dropdown-column">
+<!-- <h4>Clothing</h4> -->
+<a href="#">Jumpsuits</a>
+<a href="#">Shirts</a>
+<a href="#">Bottoms</a>
+<a href="#">Shorts</a>
+<a href="#">Skirts</a>
+</div>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropdown-button">
+            Toddlers
+          </button>
+<div class="dropdown-content">
+<div class="dropdown-column">
+<!-- <h4>Clothing</h4> -->
+<a href="#">Jumpsuits</a>
+<a href="#">Shirts</a>
+<a href="#">Bottoms</a>
+<a href="#">Shorts</a>
+<a href="#">Skirts</a>
+</div>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropdown-button">
+            Stuffed Toys
+          </button>
+<div class="dropdown-content">
+<div class="dropdown-column">
+<h4>Popular Characters</h4>
+<a href="stufftoys.html">Teddy Bears</a>
+<a href="stufftoys.html">Unicorns</a>
+<a href="stufftoys.html">Dragons</a>
+<a href="stufftoys.html">Dinosaurs</a>
+<a href="stufftoys.html">Dolls</a>
+</div>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropdown-button">
+            Bath
+          </button>
+<div class="dropdown-content">
+<div class="dropdown-column">
+<a href="#">Towels &amp; Robes</a>
+<a href="#">Washcloths</a>
+<a href="#">Bath Mats</a>
+<a href="#">Bath Toys</a>
+</div>
+<!-- <br> -->
+<div class="dropdown-column">
+<a href="#">Body Wash</a>
+<a href="#">Shampoos</a>
+<a href="#">Bath Oils</a>
+<a href="#">Bath Bombs</a>
+<a href="#">Bubble Bath</a>
+</div>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropdown-button">
+            Accessories
+          </button>
+<div class="dropdown-content">
+<div class="dropdown-column">
+<a href="#">Cribs &amp; Cots</a>
+<a href="#">Baby Chairs</a>
+<a href="#">Storage Solutions</a>
+</div>
+<br>
+<div class="dropdown-column">
+<h4>Learning &amp; Play</h4>
+<a href="#">Story Books</a>
+<a href="#">Learning resources</a>
+<a href="#">Building Blocks</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<main><div class="main-wrapper"><div class="content-container"><div class="products-container">
+<div class="heading-sort-wrapper">
+<h2 class="page-title">Best Sellers</h2>
+<div class="sort-container">
+<label class="sort-label" for="sortSelect" style="background-color: #b15d1c;color: white; border-radius: 5px;padding: 5px; margin-right: 5px;">Sort by:</label>
+<select class="sort-dropdown" id="sortSelect" style="background-color: #b15d1c; color: white; border-radius: 5px; padding: 5px; ">
+  <option value="alphabetical">Alphabetical (A-Z)</option>
+  <option value="category">Category</option>
+  <option value="price-ascending" selected>Price (low to high)</option>
+  <option value="price-descending">Price (high to low)</option>
+  <option value="rating-descending">Rating (high to low)</option>
+</select>
+</div>
+</div>
+<div class="product-grid" id="productGrid">
+<!-- Products will be populated here -->
+</div>
+</div></div></div></main>
+<footer>
+<div class="footer-content">
+<!-- Quick Links -->
+<div class="footer-column">
+<h3>Quick Links</h3>
+<ul class="lines">
+<li class="contline"><a class="content" href="#">Privacy Policy</a></li>
+<li class="contline"><a class="content" href="#">FAQ</a></li>
+<li class="contline"><a class="content" href="#">Our Story</a></li>
+<li class="contline"><a class="content" href="#">Support</a></li>
+</ul>
+</div>
+<!-- Shop -->
+<div class="footer-column">
+<h3>Shop</h3>
+<ul class="lines">
+<li class="contline"><a class="content" href="#">New Arrivals</a></li>
+<li class="contline"><a class="content" href="#">Best Sellers</a></li>
+<li class="contline"><a class="content" href="#">Gift Cards</a></li>
+<li class="contline"><a class="content" href="#">Sale</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div class="footer-column">
+<h3>Contact Us</h3>
+<ul class="lines">
+<li class="contline"><a class="content" href="tel:1234567890"><img alt="" src="images/phone-icon.png"> (123) 456-7890</a></li>
+<li class="contline"><a class="content" href="mailto:info@carebear.com">✉️ info@carebear.com</a></li>
+<li class="contline"><a class="content" href="#">🏠 205 Humber College Blvd, Toronto, ON</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div class="footer-column">
+<h3>Newsletter</h3>
+<div class="newsletter-section">
+<p>Subscribe to get special offers and updates</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="Enter your email" type="email">
+<button class="newsletter-button" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  // Product data with added ratings
+  const productsData = [
+    {
+      id: 'strawberry-cardigan',
+      name: 'Strawberry Knit Cardigan',
+      description: 'Soft handmade cardigan with chunky strawberry embroidery.',
+      price: 42.00,
+      image: 'images/cardigan.jpeg',
+      category: 'accessories',
+      rating: 4.7
+    },
+    {
+      id: 'beige-bear-set',
+      name: 'Beige Bear Set',
+      description: 'Cute bear print waffle-knit set with beanie and socks.',
+      price: 35.50,
+      image: 'images/beige.jpeg',
+      category: 'clothes',
+      rating: 5.0
+    },
+    {
+      id: 'neutral-socks-set',
+      name: 'Neutral Baby Socks Set',
+      description: 'Pack of 4 cozy baby socks in soft earthy tones.',
+      price: 12.99,
+      image: 'images/socks.jpeg',
+      category: 'clothes',
+      rating: 4.3
+    },
+    {
+      id: 'bear-bottle',
+      name: 'Bear Bottle with Handles',
+      description: 'Ergonomic sippy bottle with bear ears and grip handles.',
+      price: 16.75,
+      image: 'images/bottle.jpeg',
+      category: 'accessories',
+      rating: 4.5
+    },
+    {
+      id: 'pink-bunny-onesie',
+      name: 'Pink Bunny Onesie',
+      description: 'Adorable bunny-themed onesie with pink stripes and ears.',
+      price: 28.00,
+      image: 'images/pbunny.jpeg',
+      category: 'clothes',
+      rating: 4.8
+    },
+    {
+      id: 'twin-bear-jumpsuit',
+      name: 'Twin Bear Jumpsuits',
+      description: 'Matching fuzzy brown and cream bear sets with hats.',
+      price: 44.00,
+      image: 'images/twin.jpeg',
+      category: 'clothes',
+      rating: 4.6
+    },
+    {
+      id: 'polar-knit-set',
+      name: 'Blue Polar Knit Set',
+      description: 'Soft knit blue polar bear sweater with cozy pants.',
+      price: 31.50,
+      image: 'images/pandaset.jpeg',
+      category: 'clothes',
+      rating: 4.4
+    },
+    {
+      id: 'icandy-stroller',
+      name: 'Jet Black iCandy Stroller',
+      description: 'Luxury iCandy stroller in sleek black with full cover.',
+      price: 499.00,
+      image: 'images/cart.jpeg',
+      category: 'carts',
+      rating: 4.9
+    },
+    {
+      id: 'formal-bear-suit',
+      name: 'Formal Bear Suit',
+      description: 'Elegant navy bear set with white collar and bow tie.',
+      price: 38.25,
+      image: 'images/bearjumpsuit.jpeg',
+      category: 'accessories',
+      rating: 4.2
+    },
+    {
+      id: 'rainbow-bunny-rompers',
+      name: 'Rainbow Bunny Rompers',
+      description: 'Plush bunny suits with stars and rainbows for cozy play.',
+      price: 39.90,
+      image: 'images/rainbow.jpeg',
+      category: 'clothes',
+      rating: 4.7
+    },
+    {
+      id: 'woven-cradle',
+      name: 'Woven Cotton Cradle',
+      description: 'Minimalist natural fiber cradle with wooden stand.',
+      price: 119.99,
+      image: 'images/cort1.jpeg',
+      category: 'carts',
+      rating: 4.8
+    },
+    {
+      id: 'bw-bassinet',
+      name: 'Black & White Bassinet',
+      description: 'Portable infant bassinet with stars and music controls.',
+      price: 89.99,
+      image: 'images/cort2.jpeg',
+      category: 'carts',
+      rating: 3.9
+    },
+    {
+      id: 'swan-rocker',
+      name: 'Swan Rocker',
+      description: 'Plush swan rocking seat for toddlers with wooden base.',
+      price: 74.50,
+      image: 'images/duck1.jpeg',
+      category: 'accessories',
+      rating: 4.6
+    },
+    {
+      id: 'elephant-mobile',
+      name: 'Elephant Nursery Mobile',
+      description: 'Soft plush mobile with elephants, stars, and clouds.',
+      price: 29.95,
+      image: 'images/elephant3.jpeg',
+      category: 'accessories',
+      rating: 4.3
+    },
+    {
+      id: 'braided-cradle',
+      name: 'Braided Cradle with Pouch',
+      description: 'Woven cradle with side pouch and soft mattress.',
+      price: 129.99,
+      image: 'images/cort3.jpeg',
+      category: 'carts',
+      rating: 4.7
+    },
+    {
+      id: 'dino-summer',
+      name: 'Dino Summer Set',
+      description: 'Lightweight dino print summer top and shorts for toddlers.',
+      price: 22.00,
+      image: 'images/dino.jpeg',
+      category: 'clothes',
+      rating: 4.4
+    },
+    {
+      id: 'crochet-romper',
+      name: 'Crochet Ruffle Romper',
+      description: 'Elegant hand-knit white romper with soft ruffles.',
+      price: 29.50,
+      image: 'images/dress1.jpeg',
+      category: 'clothes',
+      rating: 4.9
+    },
+    {
+      id: 'floral-romper',
+      name: 'Floral Summer Dress Set',
+      description: 'Bloomy floral ruffle romper with bow and matching shoes.',
+      price: 34.99,
+      image: 'images/dress2.jpeg',
+      category: 'clothes',
+      rating: 4.8
+    },
+    {
+      id: 'neutral-onesies',
+      name: 'Neutral Ribbed Onesies (4-Pack)',
+      description: 'Set of 4 neutral tone soft onesies for everyday comfort.',
+      price: 39.99,
+      image: 'images/set.jpeg',
+      category: 'clothes',
+      rating: 4.6
+    },
+    {
+      id: 'watering-plush',
+      name: 'Watering Can Plush Toy Set',
+      description: 'Adorable watering can plush with 3 smiling garden friends.',
+      price: 18.99,
+      image: 'images/basket.jpeg',
+      category: 'clothes',
+      rating: 4.3
+    },
+    {
+      id: 'ribbon-bunny',
+      name: 'Pink Ribbon Bunny',
+      description: 'Floppy plush bunny with floral ribbon ears and paws.',
+      price: 19.99,
+      image: 'images/bunny1.jpeg',
+      category: 'toys',
+      rating: 4.7
+    },
+    {
+      id: 'birthday-cake-plush',
+      name: 'Birthday Cake Plush',
+      description: 'Smiley layered cake plush with soft candle top.',
+      price: 14.95,
+      image: 'images/cake.jpeg',
+      category: 'toys',
+      rating: 4.5
+    }
+  ];
+
+  // Function to render products
+  function renderProducts(products) {
+    const productGrid = document.getElementById('productGrid');
+    productGrid.innerHTML = '';
+    
+    products.forEach(product => {
+      // Create star rating display
+      const fullStars = Math.floor(product.rating);
+      // const hasHalfStar = product.rating % 1 >= 0.5;
+      // const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+      const emptyStars = 5 - fullStars;
+
+      let starHTML = '★'.repeat(fullStars);
+      // if (hasHalfStar) starHTML += '½';
+      starHTML += '☆'.repeat(emptyStars);
+      
+      const productCard = document.createElement('div');
+      productCard.className = 'product-card';
+      productCard.setAttribute('data-category', product.category);
+      
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-info">
+          <h3>${product.name}</h3>
+          <div class="product-rating">
+            <span class="stars">${starHTML}</span>
+            <span class="rating-value">[${product.rating.toFixed(1)}]</span>
+          </div>
+          <p>${product.description}</p>
+          <div class="price-tag">$${product.price.toFixed(2)}</div>
+          <button class="add-to-cart" onclick="addToCart({
+            id: '${product.id}',
+            name: '${product.name}',
+            price: ${product.price},
+            image: '${product.image}',
+            category: '${product.category}'
+          })">Add to Cart</button>
+        </div>
+      `;
+      
+      productGrid.appendChild(productCard);
+    });
+  }
+
+  // Sort products and display them
+  function sortAndDisplayProducts() {
+    const sortBy = document.getElementById('sortSelect').value;
+    let sortedProducts = [...productsData];
+    
+    if (sortBy === 'alphabetical') {
+      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === 'category') {
+      const order = ['clothes', 'carts', 'toys', 'accessories'];
+      sortedProducts.sort((a, b) => order.indexOf(a.category) - order.indexOf(b.category));
+    } else if (sortBy === 'price-ascending') {
+      sortedProducts.sort((a, b) => a.price - b.price);
+    } else if (sortBy === 'price-descending') {
+      sortedProducts.sort((a, b) => b.price - a.price);
+    } else if (sortBy === 'rating-descending') {
+      sortedProducts.sort((a, b) => b.rating - a.rating);
+    }
+    
+    renderProducts(sortedProducts);
+  }
+
+  // Add to cart functionality
+  function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Create a unique identifier for each product
+    const productIdentifier = `${product.id}-${product.name}-${product.category}`;
+    
+    // Check if product already exists in cart
+    const existingProductIndex = cart.findIndex(item => 
+        `${item.id}-${item.name}-${item.category}` === productIdentifier
+    );
+    
+    if (existingProductIndex > -1) {
+        // If product exists, increase quantity up to maximum of 10
+        if (cart[existingProductIndex].quantity >= 10) {
+            alert('Maximum quantity (10) reached for this item');
+            return;
+        }
+        cart[existingProductIndex].quantity += 1;
+    } else {
+        // If it's a new product, add it with quantity 1
+        cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: 1,
+            category: product.category
+        });
+    }
+    
+    // Save updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Show success message
+    alert(`${product.name} added to cart!`);
+    
+    // Optional: Update cart count if you have one
+    if (typeof updateCartCount === 'function') {
+        updateCartCount();
+    }
+  }
+
+  // Initialize the page
+  document.addEventListener('DOMContentLoaded', function() {
+    // Set up event listener for sort dropdown
+    document.getElementById('sortSelect').addEventListener('change', sortAndDisplayProducts);
+    
+    // Initial display of products
+    sortAndDisplayProducts();
+  });
+</script>
+</body>
+</html>
