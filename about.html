@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>About Us - Care Bear</title>
+    <link rel="icon" type="image/x-icon" href="images/bear-favicon.ico">
+    <link rel="stylesheet" href="about.css">
+  </head>
+  <body>
+    <div class="hover-box">
+      <header style="margin-bottom: 15px;">
+        <div class="search-bar-body">
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="search-button" aria-label="Search"></button>
+          </div>
+          <div>
+            <nav class="top-right-header">
+              <a href="signin.html" class="top-right-header-links">Sign In</a>
+              <a href="cart.html" class="top-right-header-links">Cart</a>
+            </nav>
+          </div>
+        </div>
+        <h1 class="heading"><a href="carebearhome.html" style="text-decoration: none; color: black;">Care Bear</a></h1>
+      </header>
+      <main>
+        <div class="dropdown-menu">
+          <nav class="nav-categories">
+            <div class="dropdown">
+              <a href="bestsellers.html" class="dropdown-button" style="text-decoration: none; color: #B15D1C;">Bestsellers</a>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-button">
+                Infants
+              </button>
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                  <a href="#">Jumpsuits</a>
+                  <a href="#">Shirts</a>
+                  <a href="#">Bottoms</a>
+                  <a href="#">Shorts</a>
+                  <a href="#">Skirts</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-button">
+                Toddlers
+              </button>
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                  <a href="#">Jumpsuits</a>
+                  <a href="#">Shirts</a>
+                  <a href="#">Bottoms</a>
+                  <a href="#">Shorts</a>
+                  <a href="#">Skirts</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-button">
+                Stuffed Toys
+              </button>
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                  <h4>Popular Characters</h4>
+                  <a href="stufftoys.html">Teddy Bears</a>
+                  <a href="stufftoys.html">Unicorns</a>
+                  <a href="stufftoys.html">Dragons</a>
+                  <a href="stufftoys.html">Dinosaurs</a>
+                  <a href="stufftoys.html">Dolls</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-button">
+                Bath
+              </button>
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                  <a href="#">Towels &amp; Robes</a>
+                  <a href="#">Washcloths</a>
+                  <a href="#">Bath Mats</a>
+                  <a href="#">Bath Toys</a>
+                </div>
+                <div class="dropdown-column">
+                  <a href="#">Body Wash</a>
+                  <a href="#">Shampoos</a>
+                  <a href="#">Bath Oils</a>
+                  <a href="#">Bath Bombs</a>
+                  <a href="#">Bubble Bath</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-button">
+                Accessories
+              </button>
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                  <a href="#">Cribs &amp; Cots</a>
+                  <a href="#">Baby Chairs</a>
+                  <a href="#">Storage Solutions</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>Learning &amp; Play</h4>
+                  <a href="#">Story Books</a>
+                  <a href="#">Learning resources</a>
+                  <a href="#">Building Blocks</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <!--MAIN CONTENTS OF THE ABOUT US WEBPAGE-->
+        <div class="mission-hero">
+            <div class="hero-column left-column">
+              <div class="hero-text">
+                <h2>Our Mission</h2>
+                <p>At Care Bear, we understand parenthood is a journey filled with countless decisions. That's why we're committed to creating high-quality baby essentials that bring you peace of mind. From clothing to nursery furniture, every product is crafted to deliver comfort, joy, and safety. We're here to support you every step of the way as you embrace the wonderful adventure of parenthood!</p>
+              </div>
+            </div>
+            <div class="hero-column right-column">
+              <img src="./images/teddy.jpg" alt="Teddy bear toy" class="hero-image">
+            </div>
+          </div>
+      
+        <!-- Our Promise Section -->
+        <div id="our-promise">
+          <h2 class="section-heading">Our Promise to You</h2>
+          <div class="promise-container">
+              <div class="promise-box">
+                  <div class="promise-image" style="background-image: url('./images/eco.jpg')">
+                      <button class="plus-btn" onclick="showModal('eco-modal')" aria-label="Show eco-friendly details">+</button>
+                  </div>
+                  <div class="promise-content">
+                      <h3>Eco Friendly</h3>
+                  </div>
+              </div>
+              <div class="promise-box">
+                  <div class="promise-image" style="background-image: url('./images/safety.jpg'); background-position: center -150px;">
+                    <button class="plus-btn" onclick="showModal('safety-modal')" aria-label="Show safety details">+</button>
+                  </div>
+                  <div class="promise-content">
+                      <h3>Safety</h3>
+                  </div>
+              </div>
+              <div class="promise-box">
+                  <div class="promise-image" style="background-image: url('./images/custom.jpg')">
+                      <button class="plus-btn" onclick="showModal('custom-modal')" aria-label="Show customization details">+</button>
+                  </div>
+                  <div class="promise-content">
+                      <h3>Customizable</h3>
+                  </div>
+              </div>
+              <div class="promise-box">
+                  <div class="promise-image" style="background-image: url('./images/price.jpg')">
+                      <button class="plus-btn" onclick="showModal('price-modal')" aria-label="Show affordability details">+</button>
+                  </div>
+                  <div class="promise-content">
+                      <h3>Affordability</h3>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="eco-modal" class="modal">
+            <div class="modal-content">
+              <button class="close" onclick="closeModal('eco-modal')" aria-label="Close">&times;</button>
+                <h2>Eco-Friendly Commitment</h2>
+                <p>We use 100% organic cotton and wool fibers in all our products. Our packaging is:</p>
+                <ul>
+                    <li>Recyclable and biodegradable</li>
+                    <li>Printed with soy-based inks</li>
+                    <li>Carbon-neutral in production</li>
+                </ul>
+                <p>Every purchase helps plant 5 trees through our partnership with various non-profit environmental organizations.</p>
+            </div>
+        </div>
+
+        <div id="safety-modal" class="modal">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('safety-modal')" aria-label="Close">&times;</button>
+                <h2>Safety First</h2>
+                <p>All products meet or exceed Canadian safety standards:</p>
+                <ul>
+                    <li>Choke-proof fasteners</li>
+                    <li>BPA free</li>
+                    <li>Non-toxic dyes</li>
+                </ul>
+                <p>Our products are extensively tested by third-parties for lead, phthalates, and BPA.</p>
+            </div>
+        </div>
+
+        <div id="custom-modal" class="modal">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('custom-modal')" aria-label="Close">&times;</button>
+                <h2>Extensive Customization</h2>
+                <p>Create unique items with our customization studio:</p>
+                <ul>
+                    <li>Embroidery name personalization</li>
+                    <li>Choose from countless color combinations</li>
+                    <li>Mix-and-match clothing sets</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="price-modal" class="modal">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('price-modal')" aria-label="Close">&times;</button>
+                <h2>Affordable Quality</h2>
+                <p>We keep prices low through our:</p>
+                <ul>
+                    <li>Business-to-consumer model</li>
+                    <li>Bulk purchasing from Canadian suppliers</li>
+                    <li>Price match guarantee</li>
+                </ul>
+                <p>Enjoy free shipping on orders over $100 CAD.</p>
+            </div>
+        </div>
+        <div id="made-in-canada">
+          <div class="two-column-section">
+            <div class="content-column">
+              <h2 class="canada-heading">Made in Canada</h2>
+              <div class="canada-content">
+                <p>At Care Bear, we're proud to call Canada home. Our dedicated team operates from our headquarters located in the heart of Humber College's North Campus in Toronto, where innovation meets craftsmanship. Every stitch, every design, and every product we create is infused with Canadian values of quality, sustainability, and community.</p>
+                <p>We partner with local artisans and use materials sourced from Canadian suppliers to maintain the highest standards while supporting our national economy. When you choose Care Bear, you're not just getting a product - you're becoming part of our Canadian story.</p>
+              </div>
+            </div>
+            <div class="map-column">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.0623867680083!2d-79.60732166103752!3d43.73003083095318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3baccf5e73f9%3A0xb31c1c08801616c7!2sRexdale%2C%20Etobicoke%2C%20ON%20M9W%206B8%2C%20Canada!5e0!3m2!1sen!2sus!4v1742759026537!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Care Bear location in Toronto"></iframe>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="lines">
+                    <li class="contline"><a href="#" class="content">Privacy Policy</a></li>
+                    <li class="contline"><a href="#" class="content">FAQ</a></li>
+                    <li class="contline"><a href="#" class="content">Our Story</a></li>
+                    <li class="contline"><a href="#" class="content">Support</a></li>
+                </ul>
+            </div>
+    
+            <!-- Shop -->
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul class="lines">
+                    <li class="contline"><a href="#" class="content">New Arrivals</a></li>
+                    <li class="contline"><a href="bestsellers.html" class="content">Best Sellers</a></li>
+                    <li class="contline"><a href="#" class="content">Gift Cards</a></li>
+                    <li class="contline"><a href="#" class="content">Sale</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="lines">
+                    <li class="contline"><a href="tel:1234567890" class="content"><img src="images/phone-icon.png" alt="Phone"> (123) 456-7890</a></li>
+                    <li class="contline"><a href="mailto:info@carebear.com" class="content">✉️ info@carebear.com</a></li>
+                    <li class="contline"><a href="#" class="content">🏠 205 Humber College Blvd, Toronto, ON</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <div class="newsletter-section">
+                    <p>Subscribe to get special offers and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button type="submit" class="newsletter-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="./scripts/modal.js"></script>
+  </body>
+</html>
