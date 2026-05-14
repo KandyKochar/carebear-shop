@@ -49,17 +49,10 @@ carebear-shop/
 
 ## Installation
 
-No build step required — this is a static website.
-
 ```bash
 # Clone the repository
 git clone https://github.com/KandyKochar/carebear-shop.git
-
-# Open in browser
-open carebearhome.html
 ```
-
-Or simply open `carebearhome.html` directly in any modern browser.
 
 ## Screenshots
 
